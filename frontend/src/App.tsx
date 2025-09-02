@@ -1,12 +1,13 @@
-import './App.css'
+import "./App.css";
+import Header from "./components/head/Header";
 
 function App() {
-
   return (
-     <div>
-      <p className='font-kumbh'>1 day ago</p>
-     </div>
-  )
+    <div className="">
+      <div className="back"></div>
+      <Header />
+    </div>
+  );
 }
 
-export default App
+export default App;

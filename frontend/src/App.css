@@ -7,8 +7,8 @@
 
 @theme {
   /* Light Mode */
-  --color-primary: hsl(235.11deg 68.53% 61.37%);
-  --color-primary-violet: hsl(235.2deg 69.06% 64.51%);
+  --color-primary: hsl(235, 78%, 64%);
+  --color-primary-violet: hsl(235, 50%, 50%);
   --color-background: hsl(220deg 17.65% 96.67%);
   --color-title: hsl(219, 29%, 16%);
   --color-gray: hsl(214, 17%, 51%);
@@ -22,4 +22,11 @@
   /* font family */
   --font-kumbh: "Kumbh Sans", sans-serif;
 
+}
+
+.padx{
+  @apply px-4
+}
+.back{
+  @apply bg-linear-to-r from-primary-violet to-primary absolute top-0 left-0 h-32 w-full -z-10
 }
