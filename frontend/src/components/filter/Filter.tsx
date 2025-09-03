@@ -12,7 +12,7 @@ const Filter = () => {
   };
   return (
     <div className="padx mt-6 xl:mt-1">
-      <div className={`bg-white rounded p-3 md:px-4 md:py-0 shadow-xl/3 flex   items-center gap-6 transition-all duration-75 ease-out
+      <div className={`bg-white dark:bg-dark-card rounded p-3 md:px-4 md:py-0 shadow-xl/3 flex   items-center gap-6 transition-all duration-75 ease-out
         ${isFilterVisible ? 'h-36' : 'h-16'}`}>
         <div className={`flex flex-col divide-dark-gray/30 md:flex-row md:gap-x-2
         lg:flex-2

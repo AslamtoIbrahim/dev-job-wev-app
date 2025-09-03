@@ -13,7 +13,7 @@ const FullTimeFilter = ({className}:FullTimeFilterProp) => {
   return (
     <div onClick={checkClick} className={twMerge("flex items-center gap-x-2 p-2", className)}>
       <Checkbox isCheck={check} />
-      <p className="capitalize font-kumbh font-semibold text-xs">
+      <p className="capitalize font-kumbh font-semibold text-xs dark:text-dark-title">
         full time <span className="hidden lg:inline">only</span>
       </p>
     </div>
