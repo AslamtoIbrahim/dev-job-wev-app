@@ -28,7 +28,7 @@ body{
   @apply bg-background
 }
 .padx{
-  @apply px-4 md:px-12
+  @apply px-4 md:px-12 lg:px-0 lg:mx-auto lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl
 }
 .back{
   @apply bg-linear-to-r from-primary-violet to-primary absolute top-0 left-0 h-32 w-full -z-10 rounded-bl-4xl

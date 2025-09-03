@@ -8,7 +8,7 @@ const Home = () => {
       <div className="back"/> 
       <Header />
       <Filter />
-      <div className="padx my-10 md:my-14 space-y-10 md:grid md:grid-cols-2 md:gap-x-2">
+      <div className="padx my-10 md:my-14 space-y-10 md:grid md:grid-cols-2 md:gap-x-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-x-4">
         <JobCard />
         <JobCard />
         <JobCard />

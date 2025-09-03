@@ -9,7 +9,7 @@ const TitleFilter = ({className}: TitleFilterProp) => {
   return (
     <div className={twMerge('flex-2 md:py-3 flex items-center gap-1', className)}>
       <FaSearch className="hidden md:block text-primary size-5"/>
-      <Input placeHolder="Filter by title..." />
+      <Input placeHolder="Filter by title, companies, expertize..." />
     </div>
   )
 }
