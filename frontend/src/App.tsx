@@ -1,4 +1,5 @@
 import "./App.css";
+import Filter from "./components/filter/Filter";
 import Header from "./components/head/Header";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="">
       <div className="back"></div>
       <Header />
+      <Filter />
     </div>
   );
 }

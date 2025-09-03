@@ -24,6 +24,9 @@
 
 }
 
+body{
+  @apply bg-white
+}
 .padx{
   @apply px-4
 }
