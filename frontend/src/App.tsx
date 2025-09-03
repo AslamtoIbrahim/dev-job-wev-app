@@ -1,13 +1,10 @@
 import "./App.css";
-import Filter from "./components/filter/Filter";
-import Header from "./components/head/Header";
+import Home from "./components/home/Home";
 
 function App() {
   return (
-    <div className="">
-      <div className="back"></div>
-      <Header />
-      <Filter />
+    <div>
+      <Home />
     </div>
   );
 }
