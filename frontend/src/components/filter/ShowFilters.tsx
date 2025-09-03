@@ -8,7 +8,7 @@ type ShowFiltersProp = {
 const ShowFilters = ({showClick}: ShowFiltersProp) => {
    
   return (
-    <div onClick={() => showClick()} className="p-1 cursor-pointer">
+    <div onClick={() => showClick()} className="p-1 cursor-pointer md:hidden">
       <FaFilter className="text-gray size-5" />
     </div>
   )

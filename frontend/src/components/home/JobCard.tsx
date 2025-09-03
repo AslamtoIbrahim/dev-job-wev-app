@@ -1,6 +1,6 @@
 const JobCard = () => {
   return (
-    <div className="bg-white py-6 px-5 relative space-y-6 shadow-2xl/10 rounded shadow-dark-gray">
+    <div className="bg-white p-6 h-50 relative space-y-6 shadow-2xl/10 rounded shadow-dark-gray">
       <div className="bg-amber-400  rounded-lg size-10 flex justify-center items-center absolute -top-4">
         <img src="/public/vite.svg" alt="" />
       </div>

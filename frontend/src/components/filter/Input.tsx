@@ -5,7 +5,7 @@ type InputProp = {
 
 const Input = ({placeHolder}: InputProp) => {
   return (
-    <input className="outline-none w-full font-kumbh placeholder:text-dark-gray px-2 " type="text" placeholder={placeHolder} />
+    <input className="outline-none w-full font-kumbh placeholder:text-dark-gray px-2 py-2" type="text" placeholder={placeHolder} />
   )
 }
 

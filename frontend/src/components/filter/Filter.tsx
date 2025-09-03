@@ -12,19 +12,11 @@ const Filter = () => {
   };
   return (
     <div className="padx mt-6">
-      <div className="bg-white rounded p-3 shadow-xl/3 flex justify-between items-center gap-2">
-        <div className="flex flex-col gap-y-3">
-          <TitleFilter />
-          <div
-            className={`flex-col gap-y-3  ${
-              isFilterVisible ? "flex" : "hidden"
-            }`}
-          >
-            <hr className="text-dark-gray/50" />
-            <LocationFilter />
-            <hr className="text-dark-gray/50" />
-            <FullTimeFilter />
-          </div>
+      <div className="bg-white rounded p-3 md:px-4 md:py-0 shadow-xl/3 flex justify-between items-center gap-3 ">
+        <div className={`flex flex-col divide-dark-gray/30 md:flex-row md:gap-x-2 ${isFilterVisible ? 'divide-y ' : 'divide-y-0'} md:divide-x-1`}>
+            <TitleFilter />
+            <LocationFilter className={`md:flex ${isFilterVisible ? 'flex' : 'hidden'}`} />
+            <FullTimeFilter className={`md:flex ${isFilterVisible ? 'flex' : 'hidden'}`}/>
         </div>
         <ShowFilters showClick={showHideFilters} />
         <Search />
