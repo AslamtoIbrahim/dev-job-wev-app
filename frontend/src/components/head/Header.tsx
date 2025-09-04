@@ -3,7 +3,7 @@ import ThemeWrapper from "./ThemeWrapper"
 
 const Header = () => {
   return (
-    <div className="padx py-6 xl:py-8 flex justify-between items-center">
+    <div className="padxh py-6 xl:py-8 flex justify-between items-center">
       <Logo />
       <ThemeWrapper />
     </div>

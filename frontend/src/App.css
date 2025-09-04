@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-
- 
-
-
 
 @theme {
   /* Light Mode */
@@ -23,15 +19,17 @@
 
   /* font family */
   --font-kumbh: "Kumbh Sans", sans-serif;
-
 }
 
-body{
-  @apply bg-background dark:bg-dark-background
+body {
+  @apply bg-background dark:bg-dark-background;
 }
-.padx{
-  @apply px-4 md:px-12 lg:px-0 lg:mx-auto lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl
+.padxh {
+  @apply px-4 md:px-12 lg:mx-auto lg:max-w-4xl lg:px-0 xl:max-w-6xl 2xl:max-w-7xl;
 }
-.back{
-  @apply bg-linear-to-r from-primary-violet to-primary absolute top-0 left-0 h-32 w-full -z-10 rounded-bl-4xl
+.padx {
+  @apply px-4 md:px-16 lg:mx-auto lg:max-w-3xl lg:px-0 xl:max-w-3xl 2xl:max-w-4xl;
+}
+.back {
+  @apply from-primary-violet to-primary absolute top-0 left-0 -z-10 h-32 w-full md:rounded-bl-4xl bg-linear-to-r;
 }
