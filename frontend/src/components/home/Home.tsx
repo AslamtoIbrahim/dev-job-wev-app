@@ -10,10 +10,11 @@ const Home = () => {
       <div className="back" />
       <Header />
       <Filter />
-      <div className="padx my-12 space-y-10 md:mt-14 md:mb-0 md:grid md:grid-cols-2 md:gap-x-2 lg:grid-cols-3 lg:gap-x-4 xl:grid-cols-4">
+      <div className="padx mt-12 space-y-10 md:mt-14 md:my-0 md:grid md:grid-cols-2 md:gap-x-2 lg:grid-cols-3 lg:gap-x-4 xl:grid-cols-4">
+        <JobCard job={jobs}/>
         <JobCard job={jobs}/>
       </div>
-      <div className="flex w-full justify-center pb-8">
+      <div className="flex w-full justify-center py-8">
         <LoadButton />
       </div>
     </div>
