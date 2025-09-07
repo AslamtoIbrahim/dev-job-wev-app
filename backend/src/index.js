@@ -1,6 +1,7 @@
 import express from 'express'
 import homeRoute from './routes/home.js'
 import cors from 'cors'
+import detailRoute from './routes/detail.js'
 const PORT = process.env.PORT || 2000
 
 const app = express()
@@ -11,6 +12,7 @@ app.use(cors({
 }))
 
 app.use('/api/v1', homeRoute)
+app.use('/api/v1', detailRoute)
 
 
 app.listen(PORT, () => {

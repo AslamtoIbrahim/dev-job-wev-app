@@ -53,3 +53,6 @@ export type AxiosJob = {
   hasNextPage: boolean;
   jobs: Job[];
 };
+export type AxiosJobDetails = {
+  jobDetails: JobDetail
+};

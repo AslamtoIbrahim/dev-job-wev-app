@@ -1,12 +1,10 @@
-import fs from "fs";
-import path from "path";
+import { getJobDatatbase } from "../utils/databes.js";
 
-const dataPath = path.join(process.cwd(), "data.json");
 
 export const getJobList = (req, res) => {
   try {
-    const fileData = fs.readFileSync(dataPath, "utf-8");
-    let jobs = JSON.parse(fileData);
+
+    let jobs = getJobDatatbase()
     const { search, location, scheduleType, page, limit } = req.query
     console.log('search:', search);
     console.log('location:', location);
