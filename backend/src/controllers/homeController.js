@@ -7,7 +7,7 @@ export const getJobList = (req, res) => {
   try {
     const fileData = fs.readFileSync(dataPath, "utf-8");
     let jobs = JSON.parse(fileData);
-    const { search, location, scheduleType,page, limit} = req.query
+    const { search, location, scheduleType, page, limit } = req.query
     console.log('search:', search);
     console.log('location:', location);
     console.log('scheduleType:', scheduleType);
@@ -16,8 +16,13 @@ export const getJobList = (req, res) => {
 
     jobs = findJobsBySearchParams(jobs, search, location, scheduleType);
 
+    console.log('🎃 length', jobs.length)
+
+    const hasNextPage = limit * page < jobs.length
     jobs = getPaginatedJobs(jobs, limit, page)
-    res.status(200).json(jobs);
+
+
+    res.status(200).json({ hasNextPage: hasNextPage, jobs: jobs });
   } catch (error) {
     res.status(500).json({ message: "Error reading data" });
   }
@@ -32,14 +37,14 @@ const findJobsBySearchParams = (jobs, search, location, scheduleType) => {
   return jobs.filter((j) => fields.some(f => j[f].toLowerCase().includes(formatedSearch))
     && j.location.toLowerCase().includes(formatedLocation)
     && j.metadata.scheduleType.toLowerCase().includes(formatedScheduleType));
-
 };
 
 
 const getPaginatedJobs = (jobs, limit, page) => {
   if (limit && page) {
+    const start = (page - 1) * limit
     const end = page * limit
-    return jobs.slice(0, end)
+    return jobs.slice(start, end)
   }
   return jobs
 };
@@ -47,4 +52,4 @@ const getPaginatedJobs = (jobs, limit, page) => {
 
 // here is the API linke 🌐
 // http://localhost:2000/api/v1/jobs?search=&location=&scheduleType=
-// http://localhost:2000/api/v1/jobs?search=&location=&scheduleType=&page=1&limit=12
+// http://localhost:2000/api/v1/jobs?search=&location=&scheduleType=&page=1&limit=6

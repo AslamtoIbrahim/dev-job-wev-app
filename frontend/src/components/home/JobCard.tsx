@@ -12,10 +12,12 @@ const JobCard = ({ job }: { job: Job }) => {
         />
       </div>
       <div className="font-kumbh mt-4 space-y-2">
-        <div className="text-gray dark:text-dark-gray flex items-center gap-x-2">
+        <div className="text-gray dark:text-dark-gray flex items-center gap-x-2 text-nowrap">
           <p>{job.metadata.postedAt}</p>
-          <div className="bg-gray dark:bg-dark-gray size-1 rounded-full" />
-          <p className="capitalize">{job.metadata.scheduleType}</p>
+          <div
+            className={`bg-gray dark:bg-dark-gray size-1 rounded-full ${job.metadata.postedAt && job.metadata.scheduleType ? "" : "hidden"}`}
+          />
+          <p className="capitalize truncate">{job.metadata.scheduleType}</p>
         </div>
         <p className="text-title dark:text-dark-title truncate font-black capitalize">
           {job.title.toLowerCase()}

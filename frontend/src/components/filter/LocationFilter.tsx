@@ -4,13 +4,14 @@ import Input from "./Input"
 
 type LocationFilterProp = {
   className?: string
+  getLocation: (value: string) => void
 }
 
-const LocationFilter = ({className}: LocationFilterProp) => {
+const LocationFilter = ({className, getLocation}: LocationFilterProp) => {
   return (
     <div className={twMerge('flex-2 md:py-3 flex items-center gap-1', className)}>
       <FaLocationDot className="hidden md:block text-primary size-5"/>
-      <Input placeHolder="Filter by location..." />
+      <Input getVlue={(value) => getLocation(value)} placeHolder="Filter by location..." />
     </div>
   )
 }

@@ -32,3 +32,24 @@ export type ApplyLink = {
   title: string;
   link: string;
 };
+
+export type JobQuery = {
+  search: string;
+  location: string;
+  schedule: string;
+};
+
+export type QueryContext = {
+  query: JobQuery;
+  addQuery: (query: JobQuery) => void;
+};
+
+export type Action = {
+  type: "ADD_QUERY";
+  payLoad: JobQuery;
+};
+
+export type AxiosJob = {
+  hasNextPage: boolean;
+  jobs: Job[];
+};

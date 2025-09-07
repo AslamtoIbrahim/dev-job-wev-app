@@ -5,7 +5,6 @@ import { useState } from "react";
 
 const ThemeWrapper = () => {
   const [isDark, setIsDark] = useState(() => isDarkMode());
-  console.log('🧧 theme: ',isDark);
   const onSwitchTheme = () => {
     if(isDark) {
       localStorage.theme = "light";

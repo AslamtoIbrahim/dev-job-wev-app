@@ -1,13 +1,17 @@
-
 type InputProp = {
-    placeHolder: string
-}
+  placeHolder: string;
+  getVlue: (value: string) => void
+};
 
-const Input = ({placeHolder}: InputProp) => {
+const Input = ({ placeHolder, getVlue }: InputProp) => {
   return (
-    <input className="outline-none w-full font-kumbh placeholder:text-dark-gray px-2 py-2
-    placeholder-shown:truncate dark:text-gray-50" type="search" placeholder={placeHolder} />
-  )
-}
+    <input
+      onChange={(e) => getVlue(e.target.value)}
+      className="font-kumbh placeholder:text-dark-gray w-full px-2 py-2 outline-none placeholder-shown:truncate dark:text-gray-50"
+      type="search"
+      placeholder={placeHolder}
+    />
+  );
+};
 
-export default Input
+export default Input;
