@@ -2,7 +2,8 @@ import express from 'express'
 import homeRoute from './src/routes/home.js'
 import cors from 'cors'
 import detailRoute from './src/routes/detail.js'
-const PORT = process.env.PORT || 2000
+// const PORT = process.env.PORT || 3000
+const PORT = 3000
 
 const app = express()
 
