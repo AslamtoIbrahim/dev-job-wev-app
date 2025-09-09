@@ -11,7 +11,7 @@ const CleverLogo = ({ logSrc }: CleverLogoProps) => {
   useEffect(() => {
     const fac = new FastAverageColor();
     fac
-      .getColorAsync(logSrc ? logSrc : "/public/joblogo.png")
+      .getColorAsync(logSrc ? logSrc : "/joblogo.png")
       .then((color) => {
         setbgColor(color.hex);
       })
