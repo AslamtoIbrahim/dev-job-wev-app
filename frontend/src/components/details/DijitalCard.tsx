@@ -18,7 +18,7 @@ const DijitalCard = ({logo, companyName, applyLink} : DijitalCardProp) => {
         </p>
         <p className="text-gray dark:text-dark-gray">{applyLink[0].title}</p>
       </div>
-      <CompanyButton />
+      <CompanyButton companyName={companyName} />
     </div>
   );
 };

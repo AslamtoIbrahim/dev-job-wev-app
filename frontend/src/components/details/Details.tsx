@@ -6,6 +6,7 @@ import Description from "./Description";
 import DijitalCard from "./DijitalCard";
 import { useParams } from "react-router-dom";
 import LoaderSpin from "../LoaderSpin";
+import ApplyLinks from "./ApplyLinks";
 
 const Details = () => {
   const { name } = useParams();
@@ -44,6 +45,7 @@ const Details = () => {
           applyLink={applyLink}
         />
         <Description job={data} />
+        <ApplyLinks applyLink={applyLink} />
       </div>
       <div className="dark:bg-dark-card mt-6 bg-white py-4">
         <div className="padx md:flex md:items-center md:justify-between">
@@ -53,7 +55,7 @@ const Details = () => {
             </p>
             <p className="text-gray dark:text-dark-gray">{companyName}</p>
           </div>
-          <ApplyButton className="w-full md:w-fit" />
+          <ApplyButton className="w-full md:w-fit" link={applyLink[0].link} />
         </div>
       </div>
     </div>

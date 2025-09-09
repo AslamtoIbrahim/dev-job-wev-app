@@ -17,7 +17,7 @@ const Description = ({job} : {job : JobDetail}) => {
             </p>
             <p className="text-primary text-sm md:text-base font-semibold">{job.location}</p>
           </div>
-          <ApplyButton className="text-nowrap"/>
+          <ApplyButton className="text-nowrap" link={job.applyLink[0].link} />
         </div>
         <p className="text-gray dark:text-dark-gray">{job.description}</p>
       </section>
