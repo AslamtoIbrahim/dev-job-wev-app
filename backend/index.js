@@ -9,7 +9,7 @@ const app = express()
 
 // Allow frontend origin
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173', 'https://helpful-kleicha-94b4a1.netlify.app']
 }))
 
 app.use('/api/v1', homeRoute)
