@@ -27,6 +27,8 @@ export const getJobList = (req, res) => {
 };
 
 const findJobsBySearchParams = (jobs, search, location, scheduleType) => {
+  if (!search && !location && !scheduleType) return jobs;
+  
   const fields = ['title', 'companyName']
 
   const formatedSearch = search.toLowerCase();
