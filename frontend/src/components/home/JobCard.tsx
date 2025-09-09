@@ -5,12 +5,12 @@ const JobCard = ({ job }: { job: Job }) => {
   return (
     <Link to={`/jobs/job/${encodeURIComponent(job.title)}`} className="block">
       <div className="dark:bg-dark-card shadow-dark-gray relative h-50 space-y-6 rounded bg-white p-6 shadow-2xl/10 dark:shadow-xs">
-        <div className="bg-primary absolute -top-6 flex size-12 items-center justify-center rounded-xl">
+        <div className="bg-gray-50 absolute -top-6 flex size-12 items-center justify-center rounded-xl">
           <img
             className="rounded-xl"
-            src={job.logo ? job.logo : "/public/vite.svg"}
+            src={job.logo ? job.logo : "/public/joblogo.png"}
             alt={job.title}
-            onError={(e) => (e.currentTarget.src = "/public/vite.svg")}
+            onError={(e) => (e.currentTarget.src = "/public/joblogo.png")}
           />
         </div>
         <div className="font-kumbh mt-4 space-y-2">

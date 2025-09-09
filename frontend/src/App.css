@@ -28,7 +28,7 @@ body {
   @apply px-4 md:px-12 lg:mx-auto lg:max-w-4xl lg:px-0 xl:max-w-6xl 2xl:max-w-7xl;
 }
 .padx {
-  @apply px-4 md:px-16 lg:mx-auto lg:max-w-3xl lg:px-0 xl:max-w-4xl 2xl:max-w-6xl;
+  @apply px-4 md:px-16 lg:mx-auto lg:max-w-3xl lg:px-0 xl:max-w-5xl 2xl:max-w-6xl;
 }
 .back {
   @apply from-primary-violet to-primary absolute top-0 left-0 -z-10 h-32 w-full md:rounded-bl-4xl bg-linear-to-r;
