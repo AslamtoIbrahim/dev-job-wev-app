@@ -19,7 +19,7 @@ const JobCard = ({ job }: { job: Job }) => {
             <div
               className={`bg-gray dark:bg-dark-gray size-1 rounded-full ${job.metadata.postedAt && job.metadata.scheduleType ? "" : "hidden"}`}
             />
-            <p className="capitalize truncate">{job.metadata.scheduleType}</p>
+            <p className="truncate capitalize">{job.metadata.scheduleType}</p>
           </div>
           <p className="text-title dark:text-dark-title truncate font-black capitalize">
             {job.title.toLowerCase()}

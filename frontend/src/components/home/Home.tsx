@@ -16,8 +16,6 @@ const Home = () => {
     );
   }
 
-  console.log("hasNextPage: ", hasNextPage);
-
   return (
     <div>
       <div className="back" />
