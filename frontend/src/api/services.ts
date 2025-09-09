@@ -4,8 +4,8 @@ import type { AxiosJob, AxiosJobDetails, Job, JobDetail } from "../utils/types";
 
 // const url = "http://localhost:2000/api/v1/jobs";
 // const detailUrl = "http://localhost:2000/api/v1/jobs/job";
-const url = "https://dev-job-wev-app-production-ece9.up.railway.app//api/v1/jobs";
-const detailUrl = "https://dev-job-wev-app-production-ece9.up.railway.app//api/v1/jobs/job";
+const url = "https://dev-job-wev-app-production-ece9.up.railway.app/api/v1/jobs";
+const detailUrl = "https://dev-job-wev-app-production-ece9.up.railway.app/api/v1/jobs/job";
 
 const LIMIT_ITEMS = 8;
 
