@@ -1,12 +1,19 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const dataPath = path.join(process.cwd(), "backend", "data.json");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const filePath = path.join(__dirname,"..", "public", "data.json");
+console.log("📄 Looking for file at:", filePath);
+
 
 export const getJobDatatbase = () => {
-  console.log("🗂️ Current working directory:", process.cwd());
-  console.log("📄 Looking for file at:", dataPath);
-  console.log("📦 File exists:", fs.existsSync(dataPath));
-  const data = fs.readFileSync(dataPath, 'utf-8')
+  const data = fs.readFileSync(filePath, 'utf-8')
   return JSON.parse(data)
 };
+
+
+
+
